@@ -34,13 +34,19 @@ export default function Streaming() {
   }
 
   const formatDate = (dateString) => {
-    const date = new Date(dateString)
+    // Solución: crear la fecha en UTC para evitar desfase por zona horaria
+    const [year, month, day] = dateString.split('-').map(Number);
+    const date = new Date(Date.UTC(year, month - 1, day));
     return date.toLocaleDateString('es-ES', {
       day: 'numeric',
       month: 'short',
-      year: 'numeric'
-    })
+      year: 'numeric',
+      timeZone: 'UTC'
+    });
   }
+
+  // Ordenar los videos por fecha descendente (más nuevo primero)
+  const sortedStreamingContent = [...streamingContent].sort((a, b) => new Date(b.date) - new Date(a.date));
 
   return (
     <section id="streaming" className="py-20 bg-gradient-to-br from-violet-50 via-white to-purple-50 dark:from-gray-950 dark:via-gray-900 dark:to-purple-950">
@@ -79,6 +85,10 @@ export default function Streaming() {
                   <Button 
                     size="lg"
                     className="bg-white text-red-600 hover:bg-gray-100 font-bold px-8 py-4 text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
+                    as="a"
+                    href="https://www.youtube.com/watch?v=7RJyiXdufEY&t=3981s"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Play className="w-6 h-6 mr-2" />
                     Ver Ahora
@@ -99,7 +109,7 @@ export default function Streaming() {
 
         {/* Grid de contenido de streaming */}
         <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-400 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          {streamingContent.slice(1, 4).map((content, index) => (
+          {sortedStreamingContent.slice(1, 4).map((content, index) => (
             <Card 
               key={content.id} 
               className="group hover:shadow-xl transition-all duration-500 hover:scale-105 bg-white dark:bg-gray-800 border-0 dark:border-gray-700 shadow-lg overflow-hidden"

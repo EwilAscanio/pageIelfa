@@ -19,15 +19,15 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex space-x-4">
-              <Button variant="outline" size="icon" className="border-violet-400 text-violet-300 hover:bg-violet-600 hover:text-white transition-all duration-300">
+              <a href="https://www.facebook.com/ielfa.ve/?locale=es_LA" target="_blank" rel="noopener noreferrer" className="border border-violet-400 text-violet-300 hover:bg-violet-600 hover:text-white transition-all duration-300 rounded-lg p-2 inline-flex items-center">
                 <Facebook className="w-5 h-5" />
-              </Button>
-              <Button variant="outline" size="icon" className="border-violet-400 text-violet-300 hover:bg-violet-600 hover:text-white transition-all duration-300">
+              </a>
+              <a href="https://instagram.com/ielfa.ve" target="_blank" rel="noopener noreferrer" className="border border-violet-400 text-violet-300 hover:bg-violet-600 hover:text-white transition-all duration-300 rounded-lg p-2 inline-flex items-center">
                 <Instagram className="w-5 h-5" />
-              </Button>
-              <Button variant="outline" size="icon" className="border-violet-400 text-violet-300 hover:bg-violet-600 hover:text-white transition-all duration-300">
+              </a>
+              <a href="https://youtube.com/@ielfa" target="_blank" rel="noopener noreferrer" className="border border-violet-400 text-violet-300 hover:bg-violet-600 hover:text-white transition-all duration-300 rounded-lg p-2 inline-flex items-center">
                 <Youtube className="w-5 h-5" />
-              </Button>
+              </a>
             </div>
           </div>
 
@@ -38,17 +38,17 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-violet-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-300">Calle Principal 123</p>
-                  <p className="text-gray-300">Ciudad, Estado 12345</p>
+                  <p className="text-gray-300">Parque Residencial Flor Amarillo</p>
+                  <p className="text-gray-300">Valencia Edo Carabobo</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-violet-400" />
-                <p className="text-gray-300">+1 (555) 123-4567</p>
+                <p className="text-gray-300">+1 (414) 594-2817</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-violet-400" />
-                <p className="text-gray-300">info@ielfa.org</p>
+                <p className="text-gray-300">info@ielfa.com</p>
               </div>
             </div>
           </div>
@@ -73,11 +73,11 @@ export default function Footer() {
                 <h5 className="font-semibold text-white mb-2">Domingo</h5>
                 <p className="text-gray-300 text-sm">Escuela Dominical: 9:00 AM</p>
                 <p className="text-gray-300 text-sm">Servicio Principal: 10:30 AM</p>
-                <p className="text-gray-300 text-sm">Servicio Nocturno: 6:00 PM</p>
+                
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <h5 className="font-semibold text-white mb-2">Miércoles</h5>
-                <p className="text-gray-300 text-sm">Estudio Bíblico: 7:00 PM</p>
+                <h5 className="font-semibold text-white mb-2">Martes</h5>
+                <p className="text-gray-300 text-sm">Tiempo de Oracion: 7:00 PM</p>
               </div>
             </div>
           </div>

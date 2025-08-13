@@ -43,14 +43,17 @@ export default function Events() {
   }, [])
 
   const formatDate = (dateString) => {
-    const date = new Date(dateString)
+    // Se espera un formato de entrada 'YYYY-MM-DD'
+    const [year, month, day] = dateString.split('-').map(Number);
+    const date = new Date(year, month - 1, day); // Usamos el constructor de Date sin Date.UTC para que se ajuste a la zona horaria local
+  
     return date.toLocaleDateString('es-ES', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    })
-  }
+    });
+  };
 
   return (
     <section id="eventos" className="py-20 bg-gradient-to-br from-violet-50 to-purple-50">
