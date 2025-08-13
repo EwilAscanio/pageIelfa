@@ -13,16 +13,20 @@ export default function Hero() {
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Fondo con overlay de gradiente */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-br from-violet-900/90 via-purple-800/85 to-indigo-900/90"
-        style={{
-          backgroundImage: "url('https://scontent.fvln2-1.fna.fbcdn.net/v/t39.30808-6/472780500_980395254142189_256468598079661173_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=wSxM7yAWYSoQ7kNvwHiBsYC&_nc_oc=AdmmKW7kgy-uL1o6Xnra-sXH26_h0_iL-6n7f4pPTVJWF_hOdGJXC5kQT5vTlkyqCFA&_nc_zt=23&_nc_ht=scontent.fvln2-1.fna&_nc_gid=XIGa6iBNcaBzXGdiQrqiww&oh=00_AfV-BvZjdoAK0dOEMkfJDkHLo1bzM0ODPKl-Dsx1JJVglQ&oe=68A29039')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
-      />
+      {/* Fondo con overlay de gradiente y capa oscura extra */}
+      <div className="absolute inset-0">
+        <div 
+          className="w-full h-full absolute inset-0"
+          style={{
+            backgroundImage: "url('https://scontent.fvln2-1.fna.fbcdn.net/v/t39.30808-6/472780500_980395254142189_256468598079661173_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=wSxM7yAWYSoQ7kNvwHiBsYC&_nc_oc=AdmmKW7kgy-uL1o6Xnra-sXH26_h0_iL-6n7f4pPTVJWF_hOdGJXC5kQT5vTlkyqCFA&_nc_zt=23&_nc_ht=scontent.fvln2-1.fna&_nc_gid=XIGa6iBNcaBzXGdiQrqiww&oh=00_AfV-BvZjdoAK0dOEMkfJDkHLo1bzM0ODPKl-Dsx1JJVglQ&oe=68A29039')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed'
+          }}
+        />
+        <div className="absolute inset-0 bg-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-900/60 via-purple-900/50 to-indigo-900/60 backdrop-blur-sm" />
+      </div>
       
       {/* Partículas animadas */}
       <div className="absolute inset-0">
@@ -43,9 +47,9 @@ export default function Hero() {
       {/* Contenido principal */}
       <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
         <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-[0_2px_8px_rgba(60,0,120,0.7)]">
             Bienvenidos a
-            <span className="block bg-gradient-to-r from-violet-300 to-purple-200 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-violet-300 to-purple-200 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(60,0,120,0.7)]">
               IELFA
             </span>
           </h1>
@@ -63,7 +67,7 @@ export default function Hero() {
             <Heart className="w-5 h-5 mr-2" />
             Únete a Nosotros
           </Button>
-          <Button size="lg" variant="outline" className="border-2 border-white/50 text-white hover:bg-white hover:text-violet-900 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
+          <Button size="lg" variant="outline" className="border-2 border-white/50 text-violet-900 hover:bg-white hover:text-violet-900 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105">
             <Calendar className="w-5 h-5 mr-2" />
             Ver Eventos
           </Button>
@@ -72,11 +76,11 @@ export default function Hero() {
         {/* Estadísticas */}
         <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 transition-all duration-1000 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">500+</div>
+            <div className="text-4xl font-bold text-white mb-2">200+</div>
             <div className="text-violet-200">Miembros Activos</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-white mb-2">15</div>
+            <div className="text-4xl font-bold text-white mb-2">35</div>
             <div className="text-violet-200">Años de Servicio</div>
           </div>
           <div className="text-center">
