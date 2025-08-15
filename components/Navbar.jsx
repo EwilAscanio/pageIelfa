@@ -26,7 +26,7 @@ export default function Navbar() {
               <h1 className="text-2xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
                 IELFA
               </h1>
-              <p className="text-xs text-gray-600 -mt-1 dark:text-gray-400">Iglesia Evangélica La Fe Abundante</p>
+              <p className="text-xs text-gray-600 -mt-1 dark:text-gray-400">Iglesia Evangélica Libre Flor Amarillo</p>
             </div>
           </div>
 

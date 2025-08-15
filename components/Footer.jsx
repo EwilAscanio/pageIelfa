@@ -104,7 +104,7 @@ export default function Footer() {
         {/* Barra inferior */}
         <div className="mt-12 pt-8 border-t border-violet-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2025 Iglesia Evangélica La Fe Abundante (IELFA). Todos los derechos reservados.
+            © 2025 Iglesia Evangélica Libre Flor Amarillo (IELFA). Todos los derechos reservados.
           </p>
           <div className="flex items-center text-gray-400 text-sm">
             <span>Hecho con</span>
